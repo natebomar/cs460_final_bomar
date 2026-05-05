@@ -62,7 +62,7 @@ After computing cheapest inter-location travel costs, suppose you have:
 Two possible routes:
 
 - Route 1: S -> B -> D -> C -> T &nbsp; total fuel = 1 + 1 + 1 + 1 = **4**
-- Route 2: S -> C -> B -> D -> T &nbsp; total fuel = 2 + 1 + 1 + 1 = **5**
+- Route 2: S -> D -> C -> B -> T &nbsp; total fuel = 2 + 1 + 1 + 1 = **5**
 
 Both collect every relic. Both end at T. Their total costs differ. Knowing cheapest
 point-to-point travel costs alone does not tell you which collection order is optimal.
