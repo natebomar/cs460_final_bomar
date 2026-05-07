@@ -1,7 +1,7 @@
 # Development Log – The Torchbearer
 
-**Student Name:** ___________________________
-**Student ID:** ___________________________
+**Student Name:** Nathan Bomar
+**Student ID:** 129901002
 
 > Instructions: Write at least four dated entries. Required entry types are marked below.
 > Two to five sentences per entry is sufficient. Write entries as you go, not all in one
@@ -10,12 +10,13 @@
 
 ---
 
-## Entry 1 – [Date]: Initial Plan
+## Entry 1 – 05/05/2026: Initial Plan
 
 > Required. Write this before writing any code. Describe your plan: what you will
 > implement first, what parts you expect to be difficult, and how you plan to test.
 
-_Your entry here._
+Starting day simply read assignment instructions and created my repo to push to. Read problem description and came up with ideas.
+The 5th is my 21st birthday, so I don't expect to come back for another day or 2. Then I will tackle parts 1 and 2.
 
 ---
 
