@@ -17,13 +17,13 @@
 > per question. Each bullet should be 1-2 sentences max.
 
 - **Why a single shortest-path run from S is not enough:**
-  _Your answer here._
+  -The shortest path from S to T alone will likely not hit every relic room. The inclusion of the relic rooms, and the fact that cheaper paths between them may not consist of only relics, makes a shortest-path run insufficient.
 
 - **What decision remains after all inter-location costs are known:**
-  _Your answer here._
+ -The path taken between all relic rooms and to the exit remains to be decided.
 
 - **Why this requires a search over orders (one sentence):**
-  _Your answer here._
+-Because a simple shortest path is insufficient, we must take a best-so-far approach over the different valid paths that meet the criteria above.
 
 ---
 
@@ -35,8 +35,8 @@
 
 | Source Node Type | Why it is a source |
 |---|---|
-| _node type_ | _one-line reason_ |
-| _node type_ | _one-line reason_ |
+| spawn | must be a source to the node picked next for djikstra's|
+| relics | Because each relic node must be reached before exiting, we need to launch Djikstra's from each one to get the costs between. |
 
 ### Part 2b: Distance Storage
 
@@ -44,17 +44,17 @@
 
 | Property | Your answer |
 |---|---|
-| Data structure name | |
-| What the keys represent | |
-| What the values represent | |
-| Lookup time complexity | |
-| Why O(1) lookup is possible | |
+| Data structure name | Dictionary |
+| What the keys represent | Other Nodes in the graph |
+| What the values represent | Total minimum distance to corresponding key(node) |
+| Lookup time complexity | O(n) is worst case, Average O(1) |
+| Why O(1) lookup is possible | Dictionaries store keys with a hash map, which has average complexity O(1). |
 
 ### Part 2c: Precomputation Complexity
 
 > State the total complexity and show the arithmetic. Two to three lines max.
 
-- **Number of Dijkstra runs:** _your answer_
+- **Number of Dijkstra runs:** R
 - **Cost per run:** _your answer_
 - **Total complexity:** _your answer_
 - **Justification (one line):** _your answer_

@@ -2,8 +2,8 @@
 CS 460 – Algorithms: Final Programming Assignment
 The Torchbearer
 
-Student Name: ___________________________
-Student ID:   ___________________________
+Student Name: Nathan Bomar
+Student ID:   129901002
 
 INSTRUCTIONS
 ------------
@@ -34,7 +34,11 @@ def explain_problem():
 
     TODO
     """
-    return "TODO"
+    return "The shortest path from S to T alone will likely not hit every relic room. " \
+    "The inclusion of the relic rooms, and the fact that cheaper paths between them may not consist of only relics, " \
+    "makes a shortest-path run insufficient. The path taken between all relic rooms and to the exit remains to be decided. " \
+    "Because a simple shortest path is insufficient, we must take a best-so-far approach over the different valid " \
+    "paths that meet the criteria above."
 
 
 # =============================================================================
@@ -56,7 +60,9 @@ def select_sources(spawn, relics, exit_node):
 
     TODO
     """
-    pass
+    if spawn not in relics:
+        return relics.append(spawn)
+    return relics
 
 
 def run_dijkstra(graph, source):

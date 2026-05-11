@@ -20,12 +20,12 @@ The 5th is my 21st birthday, so I don't expect to come back for another day or 2
 
 ---
 
-## Entry 2 – [Date]: [Short description]
+## Entry 2 – 05/10/2026: Part 2a and Brainstorming
 
 > Required. At least one entry must describe a bug, wrong assumption, or design change
 > you encountered. Describe what went wrong and how you resolved it.
 
-_Your entry here._
+When I looked at the part 2 a few days ago, I already had some questions. After emailing Manju and then thinking some more, I got 2a done and started working on 2b. Unfortunately the events of the past several days have been draining; Happy Mother's day, I will do lots of work over the next few days.
 
 ---
 
