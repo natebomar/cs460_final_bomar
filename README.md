@@ -54,10 +54,10 @@
 
 > State the total complexity and show the arithmetic. Two to three lines max.
 
-- **Number of Dijkstra runs:** R
-- **Cost per run:** _your answer_
-- **Total complexity:** _your answer_
-- **Justification (one line):** _your answer_
+- **Number of Dijkstra runs:** k + 1(each relic and spawn)
+- **Cost per run:** O(mlog(n))
+- **Total complexity:** O(k*mlog(n))
+- **Justification (one line):** We run djikstra's on each relic to know the cost between each one and the exit.
 
 ---
 
@@ -72,29 +72,32 @@
 > Do not copy the invariant text from the spec.
 
 - **For nodes already finalized (in S):**
-  _Your answer here._
+  The cost displayed is the minimum cost from S to that node
 
 - **For nodes not yet finalized (not in S):**
-  _Your answer here._
+  The cost displayed is infinite as the minimum cost from S has not yet been determined
 
 ### Part 3b: Why Each Phase Holds
 
 > One to two bullets per phase. Maintenance must mention nonnegative edge weights.
 
 - **Initialization : why the invariant holds before iteration 1:**
-  _Your answer here._
+  S only holds the cost of 0 for itself, as the cost from S to itself is known to be 0
+  All other minima unknown, so their costs are infinite.
 
 - **Maintenance : why finalizing the min-dist node is always correct:**
-  _Your answer here._
+ Because there are no negative edge weights, the current minimum node cannot be reached in a different way that doesn't cost more
+ Taking another path means starting from a higher weight, so the end result must be greater
 
 - **Termination : what the invariant guarantees when the algorithm ends:**
-  _Your answer here._
+At termination, all node costs will be minimal, with unreachable nodes having an infinite cost.
 
 ### Part 3c: Why This Matters for the Route Planner
 
 > One sentence connecting correct distances to correct routing decisions.
 
-_Your answer here._
+We want to go between relic rooms and to the exit while incurring the lowest penalty
+Having shortest paths between spawn, relic rooms, and exits will help us determine this best path.
 
 ---
 

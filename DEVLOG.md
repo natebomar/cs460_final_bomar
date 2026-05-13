@@ -29,9 +29,12 @@ When I looked at the part 2 a few days ago, I already had some questions. After 
 
 ---
 
-## Entry 3 – [Date]: [Short description]
+## Entry 3 – 5/12-5/13, 2026: Parts 2, 3, and 4
 
-_Your entry here._
+I ran into trouble figuring out how to keep distance traveled so far in Djikstra's without storing prev node value as another field
+After sleeping on it I came up with what I'd call a pretty elegant solution.
+Then finished the Invariant Check for part 3, and read through Part 4. 
+I'm calling it a day here because I got a date to go toand part 4 looks like it won't take long, so I can lump it in easy with parts 5 and 6 tomorrow.
 
 ---
 
@@ -50,9 +53,9 @@ _Your entry here._
 
 | Part | Estimated Hours |
 |---|---|
-| Part 1: Problem Analysis | |
-| Part 2: Precomputation Design | |
-| Part 3: Algorithm Correctness | |
+| Part 1: Problem Analysis | 0.5 Hours |
+| Part 2: Precomputation Design | 2 hours |
+| Part 3: Algorithm Correctness | 0.5 hours |
 | Part 4: Search Design | |
 | Part 5: State and Search Space | |
 | Part 6: Pruning | |
