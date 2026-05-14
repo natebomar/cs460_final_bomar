@@ -29,16 +29,22 @@ When I looked at the part 2 a few days ago, I already had some questions. After 
 
 ---
 
-## Entry 3 – 5/12-5/13, 2026: Parts 2, 3, and 4
+## Entry 3 – 5/12-5/13, 2026: Parts 2 and 3, glimpsed 4
 
 I ran into trouble figuring out how to keep distance traveled so far in Djikstra's without storing prev node value as another field
 After sleeping on it I came up with what I'd call a pretty elegant solution.
 Then finished the Invariant Check for part 3, and read through Part 4. 
-I'm calling it a day here because I got a date to go toand part 4 looks like it won't take long, so I can lump it in easy with parts 5 and 6 tomorrow.
+I'm calling it a day here because I got a date to go to and part 4 looks like it won't take long, so I can lump it in easy with parts 5 and 6 tomorrow.
 
 ---
+## Entry 4 – 5/14/2026: Part 4 and wrote the find_optimal_route method, not implemented explore yet, 5a and 5b
 
-## Entry 4 – [Date]: Post-Implementation Reflection
+I need to step away to go get my haircut, but this felt like as good a place as any to save and commit. 
+Not quite sure what the worst case number of runs is, but I checked what my pruning will likely look like with Manju
+I'll be back soon.
+
+---
+## Entry 5 – [Date]: Post-Implementation Reflection
 
 > Required. Written after your implementation is complete. Describe what you would
 > change or improve given more time.
@@ -56,7 +62,7 @@ _Your entry here._
 | Part 1: Problem Analysis | 0.5 Hours |
 | Part 2: Precomputation Design | 2 hours |
 | Part 3: Algorithm Correctness | 0.5 hours |
-| Part 4: Search Design | |
+| Part 4: Search Design | 1 hour |
 | Part 5: State and Search Space | |
 | Part 6: Pruning | |
 | Part 7: Implementation | |

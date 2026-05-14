@@ -108,17 +108,24 @@ Having shortest paths between spawn, relic rooms, and exits will help us determi
 > State the failure mode. Then give a concrete counter-example using specific node names
 > or costs (you may use the illustration example from the spec). Three to five bullets.
 
-- **The failure mode:** _Your answer here._
-- **Counter-example setup:** _Your answer here._
-- **What greedy picks:** _Your answer here._
-- **What optimal picks:** _Your answer here._
-- **Why greedy loses:** _Your answer here._
+- **The failure mode:** When selecting the cheapest route to the next relic chamber leads to a non-optimal cost by the time you exit
+- **Counter-example setup:** Graph: {
+  'S': [('A', 1), ('B', 2), ('C', 3)]
+  'A': [('B', 4), ('C', 2), ('T', 6)]
+  'B': [('C', 3), ('T', 1500)]
+  'C': [('B', 1), ('T', 3)]
+  'T': []
+}
+M = ['A', 'B', 'c']
+- **What greedy picks:** S -> A -> C -> B -> T = 1504 total cost taking cheapest at each step
+- **What optimal picks:** S -> A -> B -> C -> T = 11 total cost
+- **Why greedy loses:** The locally optimal solution (A -> C) did not lead to the globally optimal solution.
 
 ### What the Algorithm Must Explore
 
 > One bullet. Must use the word "order."
 
-- _Your answer here._
+- The algorithm must explore the dungeon in different orders, moving on if the current path is more expensive than the best so far.
 
 ---
 
@@ -131,9 +138,9 @@ Having shortest paths between spawn, relic rooms, and exits will help us determi
 
 | Component | Variable name in code | Data type | Description |
 |---|---|---|---|
-| Current location | | | |
-| Relics already collected | | | |
-| Fuel cost so far | | | |
+| Current location | current_node | node(string) | Holds current nodes name, used to determine next possible steps |
+| Relics already collected | relics_visited | list(node) | Keeps track of which relics have been collected, once equal to relics list, find exit|
+| Fuel cost so far | current_cost | float | |
 
 ### Part 5b: Data Structure for Visited Relics
 
@@ -141,11 +148,11 @@ Having shortest paths between spawn, relic rooms, and exits will help us determi
 
 | Property | Your answer |
 |---|---|
-| Data structure chosen | |
-| Operation: check if relic already collected | Time complexity: |
-| Operation: mark a relic as collected | Time complexity: |
-| Operation: unmark a relic (backtrack) | Time complexity: |
-| Why this structure fits | |
+| Data structure chosen | stack(implemented through list) |
+| Operation: check if relic already collected | Time complexity: O(n) |
+| Operation: mark a relic as collected | Time complexity: O(1)|
+| Operation: unmark a relic (backtrack) | Time complexity: O(1)|
+| Why this structure fits | Because backtracking should involve changing the most recent decision first, we should follow the LIFO insertion/removal order|
 
 ### Part 5c: Worst-Case Search Space
 

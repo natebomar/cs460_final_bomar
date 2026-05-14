@@ -174,7 +174,18 @@ def explain_search():
 
     TODO
     """
-    return "TODO"
+    return  "The failure mode:** When selecting the cheapest route to the next relic chamber leads to a non-optimal cost by the time you exit " \
+            "Counter-example setup:** Graph: {\n" \
+            "'S': [('A', 1), ('B', 2), ('C', 3)]\n" \
+            "'A': [('B', 4), ('C', 2), ('T', 6)]\n" \
+            "'B': [('C', 3), ('T', 1500)]\n" \
+            "'C': [('B', 1), ('T', 3)]\n" \
+            "'T': []\n" \
+            "}\n" \
+            "M = ['A', 'B', 'c']\n" \
+            "What greedy picks:** S -> A -> C -> B -> T = 1504 total cost taking cheapest at each step\n" \
+            "What optimal picks:** S -> A -> B -> C -> T = 11 total cost\n" \
+            "Why greedy loses:** The locally optimal solution (A -> C) did not lead to the globally optimal solution."
 
 
 # =============================================================================
@@ -201,7 +212,14 @@ def find_optimal_route(dist_table, spawn, relics, exit_node):
 
     TODO
     """
-    pass
+    visited_relics = []
+    relics_to_visit = [relic for relic in relics]
+    if(dist_table['S']['T'] == INFINITY):
+        return (INFINITY, [])
+    best = [INFINITY]
+    _explore(dist_table, 'S', relics_to_visit, visited_relics, 0, 'T', best) #Still need to code this; make it change vars visited_relics, and best
+    return (best[0], visited_relics)
+    
 
 
 def _explore(dist_table, current_loc, relics_remaining, relics_visited_order,
