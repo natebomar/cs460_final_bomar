@@ -44,27 +44,27 @@ Not quite sure what the worst case number of runs is, but I checked what my prun
 I'll be back soon.
 
 ---
-## Entry 5 – [Date]: Post-Implementation Reflection
+## Entry 5 – 5/14/2026: Post-Implementation Reflection
 
 > Required. Written after your implementation is complete. Describe what you would
 > change or improve given more time.
 
-_Your entry here._
+After lots of trouble shooting with stack overflow errors due to recursion following what feels like an ever changing rule book, I got all tests to pass. Had I more time, I would probably try to improve space complexity, I think that the amount of inputs can be reduced, and would make the recursion stack hold less variables. I'd also play around with finding other useful bounds.
 
 ---
 
-## Final Entry – [Date]: Time Estimate
+## Final Entry – 5/14/2026: Time Estimate
 
 > Required. Estimate minutes spent per part. Honesty is expected; accuracy is not graded.
 
 | Part | Estimated Hours |
 |---|---|
 | Part 1: Problem Analysis | 0.5 Hours |
-| Part 2: Precomputation Design | 2 hours |
-| Part 3: Algorithm Correctness | 0.5 hours |
-| Part 4: Search Design | 1 hour |
-| Part 5: State and Search Space | |
-| Part 6: Pruning | |
-| Part 7: Implementation | |
-| README and DEVLOG writing | |
-| **Total** | |
+| Part 2: Precomputation Design | 2 Hours |
+| Part 3: Algorithm Correctness | 0.5 Hours |
+| Part 4: Search Design | 1 Hour |
+| Part 5: State and Search Space | 0.5 Hours |
+| Part 6: Pruning | 1 Hour |
+| Part 7: Implementation | 3 Hours |
+| README and DEVLOG writing | 0.5 Hour |
+| **Total** | 9 Hours |

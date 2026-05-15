@@ -1,7 +1,7 @@
 # The Torchbearer
 
-**Student Name:** ___________________________
-**Student ID:** ___________________________
+**Student Name:** Nate Bomar
+**Student ID:** 129901002
 **Course:** CS 460 – Algorithms | Spring 2026
 
 > This README is your project documentation. Write it the way a developer would document
@@ -140,7 +140,7 @@ M = ['A', 'B', 'c']
 |---|---|---|---|
 | Current location | current_node | node(string) | Holds current nodes name, used to determine next possible steps |
 | Relics already collected | relics_visited | list(node) | Keeps track of which relics have been collected, once equal to relics list, find exit|
-| Fuel cost so far | current_cost | float | |
+| Fuel cost so far | current_cost | float | This holds the current cost to traverse the list, and is checked against the best so far for pruning paths |
 
 ### Part 5b: Data Structure for Visited Relics
 
@@ -158,8 +158,8 @@ M = ['A', 'B', 'c']
 
 > Two bullets.
 
-- **Worst-case number of orders considered:** _Your answer (in terms of k)._
-- **Why:** _One-line justification._
+- **Worst-case number of orders considered:** The worst case will still check k! orders/paths, but this is a very specific case.
+- **Why:** If every path between the k chambers and to the exit is the same, 
 
 ---
 
@@ -169,23 +169,24 @@ M = ['A', 'B', 'c']
 
 > Three bullets.
 
-- **What is tracked:** _Your answer here._
-- **When it is used:** _Your answer here._
-- **What it allows the algorithm to skip:** _Your answer here._
+- **What is tracked:** cost_so_far, best, the cheapest distance to exit
+- **When it is used:** Each time a new step is taken
+- **What it allows the algorithm to skip:** Any paths where the cost_so_far is greater than the best during traversal 
 
 ### Part 6b: Lower Bound Estimation
 
 > Three bullets.
 
-- **What information is available at the current state:** _Your answer here._
-- **What the lower bound accounts for:** _Your answer here._
-- **Why it never overestimates:** _Your answer here._
+- **What information is available at the current state:** the currently accumulated cost of the forming order
+- **What the lower bound accounts for:** The lower bound accounts for any forming orders with an equal or higher cost than that of the stored cost of the best finished order
+- **Why it never overestimates:** Because all edge weights are positive, an unfinished trip with an equal weight to a finished trip MUST have a higher finished cost, and can therefore be pruned.
 
 ### Part 6c: Pruning Correctness
 
 > One to two bullets. Explain why pruning is safe.
 
-- _Your answer here._
+- In my algorithm a path is pruned if a) it cannot reach the end, which is safe because this means we have hit a dead end OR 
+- b) the current cost is greater or equal to the best so far, which is safe to prune because the cost can only go up in a positively weighted graph.
 
 ---
 
@@ -193,4 +194,6 @@ M = ['A', 'B', 'c']
 
 > Bullet list. If none beyond lecture notes, write that.
 
-- _Your references here._
+- I used the class GPT for the first time, it was pretty cool. Used it to explain more in depth what a lower bound is since I wasn't familiar with the vocabulary
+- https://www.geeksforgeeks.org/dsa/time-and-space-complexity-of-dijkstras-algorithm/ Used that for a refresher on Djikstra runtimes
+- Otherwise lecture notes and reading my errors
